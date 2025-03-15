@@ -1,14 +1,20 @@
 import React from "react";
+import DOMPurify from "dompurify"; 
 
 const BookTable = ({ books }) => {
-  // Ordenar los libros lógicamente: Primero por autor, luego por año
+  //  sanitizar los datos, buscando prevenir ataques XSS
+  const sanitizeText = (text) => {
+    return DOMPurify.sanitize(text);
+  };
+
+  // Ordenar los libros lógicamente, por autor y luego por año de publicacion, y por año si hay un autor con mas de un libro
   const sortedBooks = [...books].sort((a, b) => {
     if (a.author !== "Autor Desconocido" && b.author !== "Autor Desconocido") {
       return a.author.localeCompare(b.author) || a.year - b.year;
     } else if (a.author === "Autor Desconocido" && b.author === "Autor Desconocido") {
-      return a.year - b.year; // Ordenar por año si no tienen autor
+      return a.year - b.year; 
     } else {
-      return a.author === "Autor Desconocido" ? 1 : -1; // Poner los "Autor Desconocido" al final
+      return a.author === "Autor Desconocido" ? 1 : -1; 
     }
   });
 
@@ -24,8 +30,8 @@ const BookTable = ({ books }) => {
       <tbody>
         {sortedBooks.map((book, index) => (
           <tr key={index}>
-            <td>{book.title}</td>
-            <td>{book.author}</td>
+            <td>{sanitizeText(book.title)}</td>
+            <td>{sanitizeText(book.author)}</td>
             <td>{book.year === 0 ? 0 : book.year}</td>
           </tr>
         ))}
