@@ -1,5 +1,5 @@
 # Prueba Técnica PP
-TASK
+**TASK
 1) resolver conflictos en el formato de autores y nombres libros
 2) eliminar libros duplicados
 3) resolver conflicto de falta de autores
@@ -12,6 +12,7 @@ TASK
 - agrupacion logica de libros por autor y si no tiene autor por año de publicacion, se eligio los que no tienen autor conocido dejarlos al ultimo
  
 **Tecnologias utilizadas**
+
 -vite+react
 -JavaScript
 -HTML + CSS
