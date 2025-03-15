@@ -14,9 +14,13 @@
 **Tecnologias utilizadas**
 
 -vite+react
+
 -JavaScript
+
 -HTML + CSS
+
 -DOMPurify (libreria para manejar XSS)
+
 -Web Crypto API (para hacer el HASH)
 
 **Medidas de seguridad**
