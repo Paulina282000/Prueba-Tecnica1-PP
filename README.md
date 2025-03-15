@@ -17,7 +17,7 @@ TASK
 -HTML + CSS
 -DOMPurify (libreria para manejar XSS)
 -Web Crypto API (para hacer el HASH)
----
+
 **Medidas de seguridad**
 - Sanirtizacion de datos (proteccion XSS) con DOMPurify en 'BookTable.jsx', para evitar inyecciones malisiosas en los datos cargados desde CSV.
 - Hashing SHA-256 para asegurar la integridad de datos se genera un HASH SHA-256 para asegurar que el contenido del CSV no haya sido manipulado
