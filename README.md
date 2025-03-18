@@ -10,6 +10,7 @@
 - carga de archivos csv con la informacion de los libros
 - procesamiento de datos para eliminar duplicados, corregir datos invalidos y organizar la informacion
 - agrupacion logica de libros por autor y si no tiene autor por año de publicacion, se eligio los que no tienen autor conocido dejarlos al ultimo
+- no se consideraron posibles ediciones del mismo libro 
  
 **Tecnologias utilizadas**
 
