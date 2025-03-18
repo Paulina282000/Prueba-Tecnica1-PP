@@ -17,13 +17,13 @@ const processBooks = (csvText) => {
       cleanedYear = 0;
     }
 
-    // Normalizar el nombre del autor (primera letra en mayúscula, resto en minúsculas). No especificaba el formato el enunciado
+    // Normaliza el nombre del autor (primera letra en mayúscula, resto en minúsculas). No especificaba el formato el enunciado
     cleanedAuthor = cleanedAuthor
       .split(" ")
       .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
       .join(" ");
 
-    // Crear una clave única en minúsculas para evitar duplicados
+    // Crear una clave única en minuscula para evitar duplicados
     const bookKey = `${cleanedTitle}-${cleanedAuthor.toLowerCase()}-${cleanedYear}`;
 
     if (!seenBooks.has(bookKey)) {

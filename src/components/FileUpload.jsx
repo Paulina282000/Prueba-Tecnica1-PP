@@ -1,6 +1,6 @@
 import React from "react";
 
-const MAX_FILE_SIZE = 2 * 1024 * 1024; //el maximo se establece en 2MB
+const MAX_FILE_SIZE = 2 * 1024 * 1024; //el maximo se establece en 2MB, extra
 
 const FileUpload = ({ onFileUpload }) => {
   //SHA-256 usando la API Web Crypto

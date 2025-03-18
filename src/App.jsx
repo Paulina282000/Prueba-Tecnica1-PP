@@ -20,17 +20,17 @@ const App = () => {
     <div className="app-container">
       <h1>📚 Biblioteca Digital</h1>
 
-      {/* Componente de carga de archivos */}
+      
       <FileUpload onFileUpload={handleFileUpload} />
 
-      {/* Botón para limpiar la tabla */}
+      
       {books.length > 0 && (
         <button onClick={handleClearBooks} className="clear-button">
           Limpiar y cargar nuevo archivo
         </button>
       )}
 
-      {/* Tabla con los libros */}
+      
       <BookTable books={books} />
     </div>
   );
