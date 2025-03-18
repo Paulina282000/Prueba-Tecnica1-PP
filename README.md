@@ -28,4 +28,4 @@
 - Sanirtizacion de datos (proteccion XSS) con DOMPurify en 'BookTable.jsx', para evitar inyecciones malisiosas en los datos cargados desde CSV.
 - Hashing SHA-256 para asegurar la integridad de datos se genera un HASH SHA-256 para asegurar que el contenido del CSV no haya sido manipulado
 - Validacion de los archivos CSV, para verificar que los archivos validos solo sean CSV con tres columnas (`Título, Autor, Año`). No contempla lineas mal formateadas o con informacion incompleta.
-- No se aceptan archivos mayores a 2MB.
+- No se aceptan archivos mayores a 2MB
